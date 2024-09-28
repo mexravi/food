@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ /*---=====Header=====---*/
+.header-1 {
+    background: rgb(0, 255, 106);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 20px;
+}
+
+.logo-image {
+    width: 90px;
+}
+
+.navbar {
+    margin-right: 20px;
+}
+
+.nav {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-link {
+    text-decoration: none;
+}
+
+/* Hamburger icon for small devices */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Media query for small devices */
+@media screen and (max-width: 600px) {
+    
+    .navbar {
+        display: none; /* Hide navbar initially */
+        flex-direction: column;
+    }
+    .hamburger {
+        display: block; /* Show hamburger icon */
+    }
+}
+</style>
+</head>
+<body>
+
+<header class="header-1">
+    <nav>
+        <div class="logo">
+            <a href="#">
+                <img src="images/logo2.png" class="img-fluid logo-image" alt="">
+            </a>
+        </div>
+       
+        <div class="navbar">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Market Place</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+            </ul>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
+    </nav>
+</header>
+
+<script>
+/* JavaScript to toggle the navbar */
+function toggleMenu() {
+    const navbar = document.querySelector('.navbar');
+    navbar.style.display = navbar.style.display === 'flex' ? 'none' : 'flex';
+}
+</script>
+
+</body>
+</html>
